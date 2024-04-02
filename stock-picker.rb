@@ -2,11 +2,11 @@ require "pry-byebug"
 binding.pry
 #Declare a method that aims to select the best stock price to buy and sell and return the 
 #days in pairs in array form
-def stock-picker(array)
+def stock_picker(input)
     #Declare an array aimed to store the days
-    days = Array.new(2) 
+    days = Array.new(0) 
     #Declare a counter variable and set to 0
-    original_array = [17,3,6,9,15,8,6,1,10]
+    original_array = input
     new_array = original_array
     #Iterate through the array
     original_array.each do |price| 
@@ -22,6 +22,7 @@ def stock-picker(array)
             #If the index of maximum value is greater than index of minimum value,
             if buyIndex < sellIndex
                 #Return the array pair of index values of minimum and maximum value
+                #by pushing the buyIndex and sellIndex into the days array
                 days.push(buyIndex, sellIndex)
                 return days
             #Otherwise, 
@@ -33,4 +34,4 @@ def stock-picker(array)
 end
 
 #Invoke the stock-picker method that returns the best day to buy and sell
-p stock-picker([17,3,6,9,15,8,6,1,10])
+puts stock_picker([17,3,6,9,15,8,6,1,10])
