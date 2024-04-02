@@ -2,7 +2,7 @@ require "pry-byebug"
 binding.pry
 #Declare a method that aims to select the best stock price to buy and sell and return the 
 #days in pairs in array form
-#def stock-picker(array)
+def stock-picker(array)
     #Declare an array aimed to store the days
     days = Array.new(2) 
     #Declare a counter variable and set to 0
@@ -30,6 +30,7 @@ binding.pry
                 new_array = original_array.difference([buy, sell])
             end
     end
-#end
+end
 
 #Invoke the stock-picker method that returns the best day to buy and sell
+p stock-picker([17,3,6,9,15,8,6,1,10])
