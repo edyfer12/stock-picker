@@ -24,7 +24,7 @@ def stock_picker(input)
                 #Return the array pair of index values of minimum and maximum value
                 #by pushing the buyIndex and sellIndex into the days array
                 days.push(buyIndex, sellIndex)
-                return days
+                return days.inspect
             #Otherwise, 
             else
                 #remove the element where the index has the best selling price and buying price
@@ -35,3 +35,4 @@ end
 
 #Invoke the stock-picker method that returns the best day to buy and sell
 puts stock_picker([17,3,6,9,15,8,6,1,10])
+puts stock_picker([1,2,3,4,5])
