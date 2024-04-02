@@ -24,7 +24,7 @@ def stock_picker(input)
             #Otherwise, 
             else
                 #remove the element where the index has the best selling price and buying price
-                new_array = original_array.difference([buy, sell])
+                new_array = original_array.difference([new_array.min(), new_array.max()])
             end
     end
 end
